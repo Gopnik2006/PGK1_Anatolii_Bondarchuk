@@ -1,0 +1,65 @@
+﻿  Engine.cpp
+  main.cpp
+C:\Users\User\Source\Repos\Silnik_2D\Engine.cpp(13,22): warning C4566: character represented by universal-character-name '\u0142' cannot be represented in the current code page (1251)
+C:\Users\User\Source\Repos\Silnik_2D\Engine.cpp(13,22): warning C4566: character represented by universal-character-name '\u0119' cannot be represented in the current code page (1251)
+C:\Users\User\Source\Repos\Silnik_2D\Engine.cpp(13,22): warning C4566: character represented by universal-character-name '\u0107' cannot be represented in the current code page (1251)
+C:\Users\User\Source\Repos\Silnik_2D\Engine.cpp(13,22): warning C4566: character represented by universal-character-name '\u00F3' cannot be represented in the current code page (1251)
+C:\Users\User\Source\Repos\Silnik_2D\Engine.cpp(30,28): error C2665: 'sf::VideoMode::VideoMode': no overloaded function could convert all the argument types
+      D:\SFML-3.0.2\include\SFML\Window\VideoMode.hpp(61,5):
+      could be 'sf::VideoMode::VideoMode(sf::Vector2u,unsigned int)'
+          C:\Users\User\Source\Repos\Silnik_2D\Engine.cpp(30,28):
+          'sf::VideoMode::VideoMode(sf::Vector2u,unsigned int)': cannot convert argument 2 from 'sf::VideoMode' to 'unsigned int'
+              C:\Users\User\Source\Repos\Silnik_2D\Engine.cpp(30,44):
+              No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+      C:\Users\User\Source\Repos\Silnik_2D\Engine.cpp(30,28):
+      while trying to match the argument list '(initializer list, sf::VideoMode)'
+  
+C:\Users\User\Source\Repos\Silnik_2D\Engine.cpp(37,18): warning C4566: character represented by universal-character-name '\u0142' cannot be represented in the current code page (1251)
+C:\Users\User\Source\Repos\Silnik_2D\Engine.cpp(37,18): warning C4566: character represented by universal-character-name '\u0119' cannot be represented in the current code page (1251)
+C:\Users\User\Source\Repos\Silnik_2D\Engine.cpp(37,18): warning C4566: character represented by universal-character-name '\u0107' cannot be represented in the current code page (1251)
+C:\Users\User\Source\Repos\Silnik_2D\Engine.cpp(48,18): warning C4566: character represented by universal-character-name '\u0142' cannot be represented in the current code page (1251)
+C:\Users\User\Source\Repos\Silnik_2D\Engine.cpp(97,20): warning C4566: character represented by universal-character-name '\u0144' cannot be represented in the current code page (1251)
+C:\Users\User\Source\Repos\Silnik_2D\Engine.cpp(97,20): warning C4566: character represented by universal-character-name '\u0142' cannot be represented in the current code page (1251)
+C:\Users\User\Source\Repos\Silnik_2D\Engine.cpp(97,20): warning C4566: character represented by universal-character-name '\u0119' cannot be represented in the current code page (1251)
+C:\Users\User\Source\Repos\Silnik_2D\main.cpp(7,42): error C2440: '<function-style-cast>': cannot convert from 'initializer list' to 'sf::VideoMode'
+      C:\Users\User\Source\Repos\Silnik_2D\main.cpp(7,42):
+      'sf::VideoMode::VideoMode': function does not take 3 arguments
+          C:\Users\User\Source\Repos\Silnik_2D\main.cpp(7,42):
+          while trying to match the argument list '(int, int, int)'
+  
+C:\Users\User\Source\Repos\Silnik_2D\main.cpp(7,28): error C2665: 'sf::RenderWindow::RenderWindow': no overloaded function could convert all the argument types
+      D:\SFML-3.0.2\include\SFML\Graphics\RenderWindow.hpp(206,1):
+      could be 'sf::RenderWindow::RenderWindow(sf::RenderWindow &&)'
+          C:\Users\User\Source\Repos\Silnik_2D\main.cpp(7,28):
+          'sf::RenderWindow::RenderWindow(sf::RenderWindow &&)': cannot convert argument 1 from 'const char [4]' to 'sf::RenderWindow &&'
+              C:\Users\User\Source\Repos\Silnik_2D\main.cpp(7,58):
+              Reason: cannot convert from 'const char [4]' to 'sf::RenderWindow'
+      D:\SFML-3.0.2\include\SFML\Graphics\RenderWindow.hpp(206,1):
+      or       'sf::RenderWindow::RenderWindow(const sf::RenderWindow &)'
+          C:\Users\User\Source\Repos\Silnik_2D\main.cpp(7,28):
+          'sf::RenderWindow::RenderWindow(const sf::RenderWindow &)': cannot convert argument 1 from 'const char [4]' to 'const sf::RenderWindow &'
+              C:\Users\User\Source\Repos\Silnik_2D\main.cpp(7,58):
+              Reason: cannot convert from 'const char [4]' to 'const sf::RenderWindow'
+      D:\SFML-3.0.2\include\SFML\Graphics\RenderWindow.hpp(127,5):
+      or       'sf::RenderWindow::RenderWindow(sf::WindowHandle,const sf::ContextSettings &)'
+          C:\Users\User\Source\Repos\Silnik_2D\main.cpp(7,28):
+          'sf::RenderWindow::RenderWindow(sf::WindowHandle,const sf::ContextSettings &)': cannot convert argument 1 from 'const char [4]' to 'sf::WindowHandle'
+              C:\Users\User\Source\Repos\Silnik_2D\main.cpp(7,58):
+              Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or parenthesized function-style cast
+      C:\Users\User\Source\Repos\Silnik_2D\main.cpp(7,28):
+      while trying to match the argument list '(const char [4])'
+  
+C:\Users\User\Source\Repos\Silnik_2D\main.cpp(12,19): error C2512: 'sf::Event': no appropriate default constructor available
+      D:\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
+C:\Users\User\Source\Repos\Silnik_2D\main.cpp(13,23): error C2660: 'sf::WindowBase::pollEvent': function does not take 1 arguments
+      D:\SFML-3.0.2\include\SFML\Window\WindowBase.hpp(226,40):
+      see declaration of 'sf::WindowBase::pollEvent'
+      C:\Users\User\Source\Repos\Silnik_2D\main.cpp(13,23):
+      while trying to match the argument list '(sf::Event)'
+  
+C:\Users\User\Source\Repos\Silnik_2D\main.cpp(14,23): error C2039: 'type': is not a member of 'sf::Event'
+      D:\SFML-3.0.2\include\SFML\Window\Event.hpp(47,7):
+      see declaration of 'sf::Event'
+  
