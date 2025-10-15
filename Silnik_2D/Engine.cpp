@@ -1,102 +1,105 @@
-﻿#include "Engine.hpp"
-#include <SFML/Window/VideoMode.hpp>
-#include <SFML/Window/ContextSettings.hpp>
-Engine::Engine()
-    : window(nullptr),
-    targetFPS(60),
-    running(false),
-    mouseEnabled(true),
-    keyboardEnabled(true)
-{
-    logFile.open("engine_log.txt", std::ios::out);
-    if (!logFile.is_open()) {
-        std::cerr << "Nie udało się otworzyć pliku logów!" << std::endl;
-    }
-}
+#pragma once
+#include <SFML/Graphics.hpp>
+#include <memory>
+#include <vector>
+#include <iostream>
 
-Engine::~Engine() {
-    shutdown();
-}
+// Przykładowa klasa bazowa dla obiektów gry
+class GameObject {
+public:
+    virtual void update(float dt) = 0;
+    virtual void render(sf::RenderWindow& window) = 0;
+    virtual ~GameObject() = default;
+};
 
-bool Engine::init(const std::string& title, int width, int height,
-    WindowMode mode, int fps, bool useMouse, bool useKeyboard)
-{
-    targetFPS = fps;
-    mouseEnabled = useMouse;
-    keyboardEnabled = useKeyboard;
+class Engine {
+private:
+    // Singleton Instance
+    static Engine* instance;
 
-    sf::VideoMode desktop = sf::VideoMode::getDesktopMode();
+    // Okno gry
+    sf::RenderWindow window;
+    sf::Event event;
 
-    sf::VideoMode videoMode({width,height},desktop);
-    const sf::ContextSettings Default;
-    sf::State state ;
+    // Kontener na obiekty gry
+    std::vector<std::shared_ptr<GameObject>> gameObjects;
 
-    window = new sf::RenderWindow(videoMode, title, state, Default);
+    // Czy gra działa?
+    bool isRunning = false;
 
-    if (!window->isOpen()) {
-        logError("Nie udało się utworzyć okna SFML.");
-        return false;
-    }
+    // Prywatny konstruktor (Singleton)
+    Engine() : window(sf::VideoMode(800, 600), "Game Engine - SFML") {}
 
-    window->setFramerateLimit(targetFPS);
-    running = true;
-    return true;
-}
+public:
+    // Usuwamy kopiowanie i przenoszenie (dla bezpieczeństwa Singletona)
+    Engine(const Engine&) = delete;
+    Engine& operator=(const Engine&) = delete;
 
-void Engine::run() {
-    if (!window) {
-        logError("Silnik nie został zainicjalizowany przed wywołaniem run().");
-        return;
+    // 🔹 Pobranie instancji Singletona
+    static Engine& getInstance() {
+        if (!instance) {
+            instance = new Engine();
+        }
+        return *instance;
     }
 
-    while (running && window->isOpen()) {
-        float deltaTime = clock.restart().asSeconds();
-
-        handleEvents();
-        update(deltaTime);
-        render();
+    // 🔹 Inicjalizacja silnika
+    void init() {
+        isRunning = true;
+        window.setFramerateLimit(60);
+        std::cout << "[Engine] Inicjalizacja silnika zakończona.\n";
     }
 
-    shutdown();
-}
-
-void Engine::clearScreen(const sf::Color& color) {
-    if (window)
-        window->clear(color);
-}
-
-void Engine::handleEvents() {
-    
-}
-
-void Engine::update(float deltaTime) {
-    // Tutaj w przyszłości logika gry
-}
-
-void Engine::render() {
-    clearScreen(sf::Color(30, 30, 30)); // np. ciemnoszary
-    // Tutaj rysowanie obiektów
-    window->display();
-}
-
-void Engine::logError(const std::string& message) {
-    if (logFile.is_open())
-        logFile << "[ERROR] " << message << std::endl;
-    else
-        std::cerr << "[ERROR] " << message << std::endl;
-}
-
-void Engine::shutdown() {
-    if (window) {
-        window->close();
-        delete window;
-        window = nullptr;
+    // 🔹 Dodawanie obiektów gry
+    void addGameObject(const std::shared_ptr<GameObject>& obj) {
+        gameObjects.push_back(obj);
     }
 
-    if (logFile.is_open()) {
-        logFile << "Silnik zakończył pracę." << std::endl;
-        logFile.close();
+    // 🔹 Obsługa wejścia (klawiatura, mysz)
+    void handleInput() {
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed)
+                isRunning = false;
+        }
     }
 
-    running = false;
-}
+    // 🔹 Aktualizacja logiki gry
+    void update(float dt) {
+        for (auto& obj : gameObjects) {
+            obj->update(dt);
+        }
+    }
+
+    // 🔹 Renderowanie obiektów gry
+    void render() {
+        window.clear();
+        for (auto& obj : gameObjects) {
+            obj->render(window);
+        }
+        window.display();
+    }
+
+    // 🔹 Główna pętla gry
+    void run() {
+        init();
+        sf::Clock clock;
+
+        while (isRunning && window.isOpen()) {
+            float dt = clock.restart().asSeconds();
+            handleInput();
+            update(dt);
+            render();
+        }
+
+        shutdown();
+    }
+
+    // 🔹 Zamykanie gry i sprzątanie
+    void shutdown() {
+        std::cout << "[Engine] Czyszczenie zasobów i zamykanie silnika.\n";
+        window.close();
+    }
+};
+
+// Inicjalizacja statycznego wskaźnika
+Engine* Engine::instance = nullptr;
