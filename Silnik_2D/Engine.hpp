@@ -7,11 +7,11 @@ private:
     sf::RenderWindow window;
     bool isRunning = false;
 
-    // Prywatny konstruktor = Singleton
+    // Singleton
     Engine();
 
 public:
-    // Dostęp do instancji Singletona
+    // Dostęp do Singletona
     static Engine& getInstance() {
         if (!instance) {
             instance = new Engine();
@@ -27,4 +27,6 @@ public:
     void init();
     void handleInput();
     void run();
+    void update(float dt);      
+    void render();
 };
