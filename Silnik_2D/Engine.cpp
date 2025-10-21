@@ -1,25 +1,42 @@
 ﻿#include "Engine.hpp"
-#include <SFML/Graphics.hpp>
+#include "LineSegment.hpp"
 #include <SFML/Window.hpp>
-#include <SFML/Window/Event.hpp>
 #include <SFML/System.hpp>
 #include <iostream>
 #include <stdio.h>
 #include <variant>
 #include <optional>
-#include "PrimitiveRenderer.cpp"
+#include <fstream>
+#include <cstdint>
 
 Engine* Engine::instance = nullptr;
 
-Engine::Engine() {
+Engine::Engine(const EngineConfig& config) {
     sf::VideoMode mode;
-    mode.size = { 800, 600 }; 
-    window = sf::RenderWindow(mode, "Engine - SFML 3.0.2"); 
+    mode.size = { config.width, config.height }; 
+    clearColor = config.clearColor;
+    window = sf::RenderWindow(mode, config.windowTitle); 
+    window.setFramerateLimit(config.fps);
+}
+
+static void log(const std::string& message) {
+    std::ofstream logFile("engine.log", std::ios::app);
+    logFile << "[LOG] " << message << "\n";
+}
+
+void Engine::shutdown() {
+    log("Shutting down engine...");
+    window.close();
+
+    // sprzątanie pamięci
+    if (instance) {
+        delete instance;
+        instance = nullptr;
+    }
 }
 
 void Engine::init() {
     isRunning = true;
-    window.setFramerateLimit(60);
     std::cout << "[Engine] Initialized\n";
 }
 
@@ -30,7 +47,7 @@ void Engine::handleInput() {
             isRunning = false;
             window.close();
         }
-        // Tutaj możesz dodać obsługę klawiatury, myszy, itp.
+        // Obsługa klawiatury, myszy.
         if (const auto* keyPressed = event->getIf<sf::Event::KeyPressed>()) {
             if (keyPressed->code == sf::Keyboard::Key::Escape) {
                 isRunning = false;
@@ -45,10 +62,7 @@ void Engine::handleInput() {
         }
         if (const auto* MousePressed = event->getIf<sf::Event::MouseButtonPressed>()) {
             if (MousePressed->button == sf::Mouse::Button(0)) {
-                sf::Vector2i pi = sf::Mouse::getPosition();
-                sf::Vector2u pu(static_cast<unsigned int>(pi.x), static_cast<unsigned int>(pi.y));
-                PrimitiveRenderer* pr = new PrimitiveRenderer(pu);
-                pr->RysujPixel();
+                
             }
         }
     }
@@ -61,27 +75,37 @@ void Engine::update(float dt) {
 
 // Rysowanie obiektów gry
 void Engine::render() {
-    window.clear(sf::Color::Black); // Czyszczenie ekranu
-    // Tutaj rysujesz wszystkie obiekty np. window.draw(sprite);
-    window.display(); // Wyświetlenie narysowanej ramki
+    window.clear(clearColor); 
+    PrimitiveRenderer renderer(&window);
+    window.display(); 
 }
 
 void Engine::run() {
     init();
     sf::Clock clock;
+    render();
     // Główna pętla
     while (isRunning && window.isOpen()) {
         float dt = clock.restart().asSeconds();
         handleInput();
-        window.clear();
+        window.clear(clearColor);
         window.display();
     }
+    shutdown();
 }
 
 int main(void) {
-    Engine& engine = Engine::getInstance();
+    
+    EngineConfig config;
+    config.width = 1280;
+    config.height = 720;
+    config.fullscreen = false;
+    config.fps = 75;
+    config.clearColor = sf::Color(60, 60, 60);
+    config.windowTitle = "Engine Window!";
 
-    // Uruchomienie pętli silnika
+    Engine& engine = Engine::getInstance(config);
+
     engine.run();
     return 0;
 }
