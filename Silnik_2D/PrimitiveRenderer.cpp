@@ -8,42 +8,24 @@ void PrimitiveRenderer::drawPoint(const sf::Vector2f& position, sf::Color color)
 }
 
 void PrimitiveRenderer::drawLine(const sf::Vector2f& start, const sf::Vector2f& end, sf::Color color) {
-    sf::Vector2f a = start;
-    sf::Vector2f b = end;
+    float dx = end.x - start.x;
+    float dy = end.y - start.y;
 
-    if (b.x < a.x) {
-        std::swap(a, b);
-    }
-    
-
-    float dx = b.x - a.x;
-    float dy = b.y - a.y;
-
-    if (dx == 0) {
-        int sy = (b.y > a.y ? 1 : -1);
-        while( a.y != b.y) {
-            drawPoint(a, color);
-            a.y += sy;
-        }
-        drawPoint(b, color);
+    float kroki = std::max(std::abs(dx), std::abs(dy));
+    if (kroki == 0) { // długość = 0
+        drawPoint(start, color);
         return;
     }
 
-    float m = dy / dx; // nachylenie
+    float xInc = dx / kroki;
+    float yInc = dy / kroki;
 
-    if (m > 1 || m < -1) {
-        m = 1 / m;
-        while(a.y <= b.y) {
-            drawPoint(a, color);
-            a.x += m;
-            a.y++;
-        }
-    }else {
-        while(a.x <= b.x) {
-            drawPoint(a, color);
-            a.y += m;
-            a.x++;
-        }
+    float x = start.x;
+    float y = start.y;
+    for (int i = 0; i <= static_cast<int>(kroki); ++i) { //wartość float konfliktuje z <=
+        drawPoint({ x, y }, color);
+        x += xInc;
+        y += yInc;
     }
 }
 

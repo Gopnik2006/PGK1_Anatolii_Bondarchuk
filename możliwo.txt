@@ -1,0 +1,22 @@
+void PrimitiveRenderer::drawLine(const sf::Vector2f& start, const sf::Vector2f& end, sf::Color color) {
+    int x0 = static_cast<int>(round(start.x));
+    int y0 = static_cast<int>(round(start.y));
+    int x1 = static_cast<int>(round(end.x));
+    int y1 = static_cast<int>(round(end.y));
+
+    int dx = abs(x1 - x0);
+    int dy = abs(y1 - y0);
+
+    int sx = (x0 < x1) ? 1 : -1;
+    int sy = (y0 < y1) ? 1 : -1;
+
+    int err = dx - dy;
+
+    while (true) {
+        drawPoint({static_cast<float>(x0), static_cast<float>(y0)}, color);
+        if (x0 == x1 && y0 == y1) break;
+        int e2 = 2 * err;
+        if (e2 > -dy) { err -= dy; x0 += sx; }
+        if (e2 < dx)  { err += dx; y0 += sy; }
+    }
+}
