@@ -1,2 +1,2 @@
-# PGK1_Anatolii_Bondarchuk
+# PGK1_Anatolii_Bondarchuk_Hubert_Zubrzycki_Julia_Plotecka
  Silnik2D
