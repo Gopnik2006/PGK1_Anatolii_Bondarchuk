@@ -21,6 +21,9 @@
     <ClCompile Include="PrimitiveRenderer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.hpp">
@@ -35,5 +38,61 @@
     <ClInclude Include="LineSegment.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="GameObject.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BitmapHandler.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="C:\Users\User\Desktop\player\player_0_0.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\User\Desktop\player\player_0_1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\User\Desktop\player\player_0_2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\User\Desktop\player\player_0_3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\User\Desktop\player\player_2_1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\User\Desktop\player\player_2_2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\User\Desktop\player\player_2_3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\User\Desktop\player\player_3_0.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\User\Desktop\player\player_3_1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\User\Desktop\player\player_3_2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\User\Desktop\player\player_3_3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\User\Desktop\player\player_1_0.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\User\Desktop\player\player_1_1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\User\Desktop\player\player_1_2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\User\Desktop\player\player_2_0.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="C:\Users\User\Desktop\player\player_1_3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

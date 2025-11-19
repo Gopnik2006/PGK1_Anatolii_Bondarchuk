@@ -1,38 +1,98 @@
 ﻿  Engine.cpp
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,98): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,98): warning C4244:         with
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,98): warning C4244:         [
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,98): warning C4244:             T=int
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,98): warning C4244:         ]
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,98): warning C4244:         and
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,98): warning C4244:         [
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,98): warning C4244:             T=float
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,98): warning C4244:         ]
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,64): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,64): warning C4244:         with
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,64): warning C4244:         [
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,64): warning C4244:             T=int
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,64): warning C4244:         ]
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,64): warning C4244:         and
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,64): warning C4244:         [
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,64): warning C4244:             T=float
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(61,64): warning C4244:         ]
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,98): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,98): warning C4244:         with
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,98): warning C4244:         [
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,98): warning C4244:             T=int
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,98): warning C4244:         ]
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,98): warning C4244:         and
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,98): warning C4244:         [
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,98): warning C4244:             T=float
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,98): warning C4244:         ]
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,64): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,64): warning C4244:         with
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,64): warning C4244:         [
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,64): warning C4244:             T=int
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,64): warning C4244:         ]
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,64): warning C4244:         and
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,64): warning C4244:         [
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,64): warning C4244:             T=float
-D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(72,64): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\BitmapHandler.hpp(79,31): warning C4834: discarding return value of function with [[nodiscard]] attribute
+  (compiling source file 'Engine.cpp')
+  
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,98): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,98): warning C4244:         with
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,98): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,98): warning C4244:             T=int
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,98): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,98): warning C4244:         and
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,98): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,98): warning C4244:             T=float
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,98): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,64): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,64): warning C4244:         with
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,64): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,64): warning C4244:             T=int
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,64): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,64): warning C4244:         and
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,64): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,64): warning C4244:             T=float
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(153,64): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,98): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,98): warning C4244:         with
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,98): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,98): warning C4244:             T=int
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,98): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,98): warning C4244:         and
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,98): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,98): warning C4244:             T=float
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,98): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,64): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,64): warning C4244:         with
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,64): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,64): warning C4244:             T=int
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,64): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,64): warning C4244:         and
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,64): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,64): warning C4244:             T=float
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(176,64): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,98): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,98): warning C4244:         with
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,98): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,98): warning C4244:             T=int
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,98): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,98): warning C4244:         and
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,98): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,98): warning C4244:             T=float
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,98): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,64): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,64): warning C4244:         with
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,64): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,64): warning C4244:             T=int
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,64): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,64): warning C4244:         and
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,64): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,64): warning C4244:             T=float
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(193,64): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,98): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,98): warning C4244:         with
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,98): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,98): warning C4244:             T=int
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,98): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,98): warning C4244:         and
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,98): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,98): warning C4244:             T=float
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,98): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,64): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,64): warning C4244:         with
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,64): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,64): warning C4244:             T=int
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,64): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,64): warning C4244:         and
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,64): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,64): warning C4244:             T=float
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(200,64): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,102): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,102): warning C4244:         with
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,102): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,102): warning C4244:             T=int
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,102): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,102): warning C4244:         and
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,102): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,102): warning C4244:             T=float
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,102): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,68): warning C4244: 'argument': conversion from 'T' to 'T', possible loss of data
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,68): warning C4244:         with
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,68): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,68): warning C4244:             T=int
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,68): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,68): warning C4244:         and
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,68): warning C4244:         [
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,68): warning C4244:             T=float
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(229,68): warning C4244:         ]
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(334,30): warning C4566: character represented by universal-character-name '\u0142' cannot be represented in the current code page (1251)
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(334,30): warning C4566: character represented by universal-character-name '\u0119' cannot be represented in the current code page (1251)
+D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\Engine.cpp(334,30): warning C4566: character represented by universal-character-name '\u0107' cannot be represented in the current code page (1251)
   Silnik_2D.vcxproj -> D:\PGK1_Anatolii_Bondarchuk\Silnik_2D\x64\Debug\Silnik_2D.exe
